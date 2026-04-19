@@ -172,7 +172,7 @@
             color: var(--neon-blue);
             letter-spacing: 1px;
             margin-bottom: 25px;
-            text-align: left; /* Changed from center to left */
+            text-align: left;
             line-height: 1.8;
             width: 100%;
             word-wrap: break-word;
@@ -294,7 +294,7 @@
             <div class="id-details">
                 OWNER: <span id="displayOwner"></span><br>
                 MICROCHIP ID: <span id="displayChip"></span><br>
-                GENDER: <span id="displayGender"></span><br>
+                SEX: <span id="displaySex"></span><br>
                 DESCRIPTION: <span id="displayDesc"></span><br>
                 HOTLINE: <span>0712345678</span><br>
                 STATUS: <span style="color:#00ff88;">VERIFIED RESIDENT</span>
@@ -494,8 +494,8 @@
                     document.getElementById('displayOwner').textContent = fullName ? fullName : "Owner Details Not Provided";
                     document.getElementById('displayChip').textContent = pet.Microchip;
                     
-                    // Populate Gender and Description
-                    document.getElementById('displayGender').textContent = pet.Gender ? pet.Gender : "N/A";
+                    // Populate Sex and Description
+                    document.getElementById('displaySex').textContent = pet.Sex ? pet.Sex : "N/A";
                     document.getElementById('displayDesc').textContent = pet.Description ? pet.Description : "N/A";
                     
                     // NEW: Update the Drive Image Link with the original Google Drive URL
