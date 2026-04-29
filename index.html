@@ -278,7 +278,8 @@
         
         <div class="search-group">
             <label>Input Pet's Microchip Number</label>
-            <input type="text" id="microchipInput" maxlength="15">
+            <!-- FIX APPLIED HERE: Added autocomplete="off" and name="microchip_number" -->
+            <input type="text" id="microchipInput" maxlength="15" autocomplete="off" name="microchip_number">
             <div id="validationError" class="error-msg">Please enter a valid microchip number.</div>
         </div>
 
@@ -364,7 +365,7 @@
                     </div>
                     <p style="margin-bottom: 15px; font-size: 12px;">${reason}</p>
                     <label style="color: var(--neon-blue); font-size: 11px;">PLEASE TURN ON LOCATION AND DATA/WIFI AND CLICK VERIFY IDENTITY BUTTON(IF ON PLEASE CLICK VERIFY IDENTITY BUTTON AGAIN) OR ENTER COORDINATES MANUALLY TO COMPLETE SYNC (LAT, LON)</label>
-                    <input type="text" id="telemetryCoordsInput" placeholder="e.g. -1.286389, 36.817223" style="margin-bottom: 15px; margin-top: 5px;">
+                    <input type="text" id="telemetryCoordsInput" placeholder="e.g. -1.286389, 36.817223" style="margin-bottom: 15px; margin-top: 5px;" autocomplete="off">
                     <button class="primary-btn" style="padding: 12px; font-size: 14px;" onclick="processTelemetryManualCoordinates('${chipId}')">Sync Location</button>
                     <div id="telemetryCoordError" class="error-msg" style="text-align: center;">Invalid format. Please use: Latitude, Longitude</div>
                 `;
@@ -578,7 +579,7 @@
                 </div>
                 <p style="margin-bottom: 15px; font-size: 12px;">${reason}</p>
                 <label style="color: var(--neon-blue); font-size: 11px;">ENTER COORDINATES MANUALLY (LAT, LON)</label>
-                <input type="text" id="manualCoordsInput" placeholder="e.g. -1.286389, 36.817223" style="margin-bottom: 15px; margin-top: 5px;">
+                <input type="text" id="manualCoordsInput" placeholder="e.g. -1.286389, 36.817223" style="margin-bottom: 15px; margin-top: 5px;" autocomplete="off">
                 <button class="primary-btn" style="padding: 12px; font-size: 14px;" onclick="processManualCoordinates()">Locate Nearby Clinics</button>
                 <div id="manualCoordError" class="error-msg" style="text-align: center;">Invalid format. Please use: Latitude, Longitude</div>
             `;
